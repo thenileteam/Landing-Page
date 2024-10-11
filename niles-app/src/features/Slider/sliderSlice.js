@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import frame3 from "../../assets/Frame-1.svg";
-import frame2 from "../../assets/Frame-2.svg";
-import frame1 from "../../assets/frame-3.svg";
+import frame1 from "../../assets/add-product.svg";
+import frame2 from "../../assets/customize.svg";
+import frame3 from "../../assets/recieve-pay.svg";
 const initialState = {
   sliderSettings: {
     dots: false,
@@ -9,7 +9,7 @@ const initialState = {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false, // Initially set autoplay to false
+    autoplay: false, 
   },
   images: [frame1, frame2, frame3],
   isHovered: false,
@@ -31,6 +31,7 @@ const sliderSlice = createSlice({
       console.log(action);
       state.sliderSettings = { ...state.sliderSettings, ...action.payload };
     },
+    //update current element for hover state on desktop
     updateCurrentElement: (state, action) => {},
   },
 });
