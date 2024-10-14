@@ -1,5 +1,4 @@
 import { Logo, Socials } from "../components";
-import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { openNavbar, closeNavbar } from "../features/modal/modalSlice";
 import menu from "../assets/menu.svg";
@@ -18,34 +17,35 @@ const Navbar = () => {
       }`}
     >
       <div className="text-pry1">
-        <div className="flex lg:justify-between lg:gap-x-16 items-center py-3.5">
-          {/* Logo */}
-          <NavLink to="#">
+        <div className="flex justify-between lg:gap-24 items-center py-3.5">
+          {/* Logo  and remember to add the beta tag*/}
+          <span className="bg-blue-500 cursor-pointer text-sm rounded-very-round fixed py-1 px-2 top-4 left-32 lg:left-36">beta</span>
+          <a href="#home">
             <Logo />
-          </NavLink>
+          </a>
 
           {/* Hamburger menu for mobile */}
           <button
             className="text-pry1 text-3xl lg:hidden"
             onClick={() => dispatch(openNavbar())}
           >
+            
             <img src={menu} className={`${isOpen ? "hidden" : "block"}`} />
           </button>
-
           {/* Navbar Links */}
-          <nav className="lg:flex hidden border-inspecting">
-            <div className=" bg-myCustomColor-lighterGreen p-7 lg:bg-primary lg:static lg:p-0 lg:flex">
-              <ul className="flex lg:gap-x-8">
+          <nav className="lg:flex hidden grow">
+            <div className=" bg-myCustomColor-lighterGreen p-7 lg:bg-primary lg:p-0 lg:flex">
+              <ul className="lg:flex-container gap-x-16">
                 {navLinkItems.map((item) => {
                   const { id, url, text, icon } = item;
                   return (
                     <div
                       key={id}
-                      className="rounded-lg mt-7 lg:m-0 p-3 lg:p-0 border-2 lg:border-0 flex items-center gap-3 border-myCustomColor-light w-60 border-inspecting"
+                      className="relative rounded-lg mt-7 lg:m-0 p-3 lg:p-0 border-2 lg:border-0 flex items-center gap-3 border-myCustomColor-light"
                     >
                       <img src={icon} alt={text} className="w-8 lg:hidden" />
-                      <li className="font-semibold text-primary lg:text-pry1">
-                        <NavLink to={url}>{text}</NavLink>
+                      <li className="navLink font-semibold text-primary lg:text-pry1">
+                        <a href={url}>{text}</a>
                       </li>
                     </div>
                   );
@@ -59,7 +59,7 @@ const Navbar = () => {
             type="button"
             className="hidden bg-pry1 text-primary font-bold transitions btn-join-waitList hover:border-2 hover:bg-transparent hover:text-pry1 lg:block lg:w-36"
           >
-            <NavLink to="#">Join Waitlist</NavLink>
+            <a href="#">Join Waitlist</a>
           </button>
 
           {/* Mobile Menu (slide-in) */}
@@ -79,7 +79,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Nav Links */}
-            <nav className="flex flex-col p-7 space-y-4 relative">
+            <nav className="flex flex-col p-4 space-y-4">
               {navLinkItems.map((item) => {
                 const { id, url, text, icon } = item;
                 return (
@@ -89,14 +89,14 @@ const Navbar = () => {
                     onClick={() => dispatch(closeNavbar())}
                   >
                     <img src={icon} alt={text} className="w-8" />
-                    <NavLink to={url} className="font-semibold text-primary">
+                    <a href={url} className="font-semibold text-primary">
                       {text}
-                    </NavLink>
+                    </a>
                   </div>
                 );
               })}
               <div className="fixed bottom-10 text-primary">
-                <Socials />
+                <Socials color='#004324'/>
               </div>
             </nav>
           </div>

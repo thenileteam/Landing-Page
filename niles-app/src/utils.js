@@ -4,9 +4,9 @@ import home from './assets/home-13.svg'
 import features from './assets/features-icon.svg'
 
 export const navLinkItems = [
-  { id: 1, text: "Home", url: "/", icon:home },
+  { id: 1, text: "Home", url: "#home", icon:home },
   { id: 2, text: "How It Works", url: "#howItWorks", icon:home },
-  { id: 3, text: "Pricing", url: "#pricing", icon: features },
+  { id: 3, text: "Pricing", url: "#pricingSection", icon: features },
 ];
 
 export const steps = [
@@ -49,32 +49,32 @@ export const pricing = [
     id: 1,
     textArray: [
       {
-        id: 101,
+        id: 1,
         text: "User access: only you",
       },
       {
-        id: 102,
+        id: 2,
         text: "Basic analysis insight",
       },
        
       {
-        id: 103,
+        id: 3,
         text: "48 hours email response",
       },
       {
-        id: 104,
+        id: 4,
         text: "Basic security features",
       },
       {
-        id: 105,
-        text: "limited 10 product listing",
+        id: 5,
+        text: "limited  product listing",
       },
       {
-        id: 106,
+        id: 6,
         text: "Basic social sharing",
       },
       {
-        id: 107,
+        id: 7,
         text: "free domain that ends with .mynile.store",
       },
     ],
@@ -83,35 +83,35 @@ export const pricing = [
     id: 2,
     textArray: [
       {
-        id: 208,
+        id: 1,
         text: "4 User access including you",
       },
       {
-        id: 209,
+        id: 2,
         text: "24 hour Priority plan",
       },
       {
-        id: 210,
+        id: 3,
         text: " Deep dive analysis and support",
       },
       {
-        id: 211,
+        id: 4,
         text: " Advanced security ans backup solution",
       },
       {
-        id: 212,
+        id: 5,
         text: "Unlimited product listings",
       },
       {
-        id: 213,
+        id: 6,
         text: " Full social media integration",
       },
       {
-        id: 214,
+        id: 7,
         text: "Personalized business domain tht ends with.com.ng",
       },
       {
-        id: 215,
+        id: 8,
         text: "Integrated reviews and rating",
       },
     ],
@@ -120,18 +120,18 @@ export const pricing = [
 
 export const howItWorksSteps = [
   {
-    id: 1,
+    id: 0,
     heading: "Add Product",
   },
   {
-    id: 2,
+    id: 1,
     heading: "Customize Your Store",
  
   },
   {
-    id: 3,
+    id: 2,
     heading: "Recieve Payment",
      
   },
 ];
-export const colors=['#004324', '#F5F5F5']
+// export const colors=['#004324', '#F5F5F5']

@@ -7,10 +7,10 @@ const Plan = ({ id, head, monthly, yearly, text, textArray }) => {
           <div className="text-center mb-4">
             <h4 className="text-myCustomColor-light mb-8 font-bold">{head}</h4>
             <span className="block text-myCustomColor-secondary">
-              <strong>{yearly}N</strong> /Yearly
+              <strong className="text-slate-950">{yearly}N</strong> /Yearly
             </span>
             <span className="block text-myCustomColor-secondary">
-              <strong>{monthly}N</strong> /Monthly
+              <strong className="text-slate-950">{monthly}N</strong> /Monthly
             </span>
             <p className="text-myCustomColor-light font-bold pt-2">{text}</p>
           </div>

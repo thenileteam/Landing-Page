@@ -1,31 +1,18 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import { HomePage, HomeNav, WhyNile, Features } from "./pages";
+import { Navbar, Hero, PricingSection,HowItWorks,Sliders,Footer, } from "./components";
 
-const router = createBrowserRouter([
-{
-  path:'/',
-  element: <HomeNav/>,
-  children:[
-    {
-      index:true,
-      element:<HomePage/>
-    },
-    {
-      path:'#',
-      element:<WhyNile/>
-    },
-    {
-      path:'#',
-      element:<Features/>
-    }
-  ]
-}
-])
+ 
 const App = () => {
   return (
+    <div>
+      <Navbar/> 
       <main>
-      <RouterProvider router={router} />
-    </main>
+        <Hero />
+        <HowItWorks />
+        <Sliders />
+        <PricingSection/>
+        <Footer/> 
+      </main>
+   </div>
   );
 };
 export default App;

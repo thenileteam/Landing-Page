@@ -10,10 +10,6 @@
     text-decoration: none;
     list-style:none;
    }
-   /* for inspection sake */
-   .border-inspecting{
-    border:2px solid red;
-   }
    html{
       scroll-behavior: smooth;
    }
@@ -26,6 +22,18 @@
       background-position: center;
       background-size: cover;
    }
+   .navLink::before {
+      content: '';
+      position: absolute;
+      inset: 1.2rem 0 0;
+      width: 0%;
+      height: 4px;
+      background-color: #fff;
+      transition: 250ms ease-in;
+  }
+  .navLink:hover::before {
+      width: 100%;
+  }
    @layer components {
     .footer-headings{
        @apply text-pry2
@@ -37,14 +45,13 @@
       @apply text-primary font-bold text-3xl text-center
     }
     .section-spacing{
-      @apply px-5 lg:px-11 py-32
+      @apply px-5 lg:px-11 py-16
     }
     .flex-container{
        @apply lg:flex justify-between
     }
     .transitions{
-      @apply transition delay-200 duration-500 ease-in
-       
+      @apply transition delay-200 duration-200 ease-in
     }
     .btn-join-waitList{
      @apply h-12 px-4 rounded-semi-round font-semibold
