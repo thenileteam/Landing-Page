@@ -11,7 +11,7 @@ const HowItWorks = () => {
           <h2 className="section-header">How It Works</h2>
           <div className="mt-20 flex-container items-center flex-col gap-10 lg:gap-5 lg:flex-row ">
             <div className="lg:w-2/5 flex items-start">
-            <img src={dots} alt="connecting dots for each step" /> 
+            <img src={dots} alt="connecting dots for each step"className=" border-inspecting" /> 
               <div className="steps">
                 {/* dots */}
                 {howItWorksSteps.map((item) => (

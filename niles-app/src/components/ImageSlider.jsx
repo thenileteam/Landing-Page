@@ -37,10 +37,10 @@ const ImageSlider = () => {
   useEffect(() => {
     if (window.innerWidth >= 1000 && sliderRef.current && isHovered) {
       const currentSlide = sliderRef.current.innerSlider.state.currentSlide;
-      if (currentElement !== currentSlide) {
+      if (currentElement === currentSlide) return
         sliderRef.current.slickGoTo(currentElement);
         dispatch(updateCurrentSlide(currentElement));
-      }
+       
     }
   }, [currentElement, isHovered]);
 

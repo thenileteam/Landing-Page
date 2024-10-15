@@ -37,7 +37,6 @@ const sliderSlice = createSlice({
       state.currentSlide = action.payload; 
     },
     updateSliderSettings: (state, action) => {
-      console.log(action);
       state.sliderSettings = { ...state.sliderSettings, ...action.payload };
     },
     setMonthlyPrice: (state, action) => {

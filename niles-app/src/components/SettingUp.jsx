@@ -8,7 +8,7 @@ const SettingUp = ({ id, heading, paragraph }) => {
   const dispatch = useDispatch();
   return (
       <article
-        className="mb-14 cursor-pointer"
+        className="mb-10 lg:mb-14 cursor-pointer"
         onMouseEnter={() => {
           //set isHovered to true and update the currentElement
           dispatch(setHoverState({ isHovered: true }));
