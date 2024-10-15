@@ -19,8 +19,8 @@ const Navbar = () => {
       <div className="text-pry1">
         <div className="flex justify-between lg:gap-24 items-center py-3.5">
           {/* Logo  and remember to add the beta tag*/}
-          <span className="bg-blue-500 cursor-pointer text-sm rounded-very-round fixed py-1 px-2 top-4 left-32 lg:left-36">beta</span>
-          <a href="#home">
+          <span className="bg-blue-500 cursor-pointer text-sm rounded-very-round fixed py-1 px-2 top-4 left-28 lg:left-36">beta</span>
+          <a href="#hero" id='home'>
             <Logo />
           </a>
 
@@ -54,15 +54,14 @@ const Navbar = () => {
             </div>
           </nav>
 
-          {/* Join Waitlist button for large screens */}
           <button
             type="button"
             className="hidden bg-pry1 text-primary font-bold transitions btn-join-waitList hover:border-2 hover:bg-transparent hover:text-pry1 lg:block lg:w-36"
           >
-            <a href="#">Join Waitlist</a>
+            <a href="https://getnile.co/" target="_blank" rel="noopener noreferrer">Join Waitlist</a>
           </button>
 
-          {/* Mobile Menu (slide-in) */}
+          {/* Mobile Menu*/}
           <div
             className={`fixed top-0 right-0 w-80 h-screen bg-myCustomColor-lighterGreen z-50 transform ${
               isOpen ? "translate-x-0" : "translate-x-full"

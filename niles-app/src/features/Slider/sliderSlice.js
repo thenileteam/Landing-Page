@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import frame1 from "../../assets/add-product.svg";
-import frame2 from "../../assets/customize.svg";
-import frame3 from "../../assets/recieve-pay.svg";
+import frame1 from "../../assets/slide1.svg";
+import frame2 from "../../assets/slide3.svg";
+import frame3 from "../../assets/slide2.svg";
  
 const initialState = {
   sliderSettings: {
@@ -17,6 +17,7 @@ const initialState = {
   isHovered: false,
   currentElement: 0,
   currentSlide: 0,
+  monthlyPrice: true
 };
 
 const sliderSlice = createSlice({
@@ -33,14 +34,17 @@ const sliderSlice = createSlice({
       state.currentElement = action.payload;
     },
     updateCurrentSlide: (state, action) => {
-      state.currentSlide = action.payload; // Update currentSlide in the state
+      state.currentSlide = action.payload; 
     },
     updateSliderSettings: (state, action) => {
       console.log(action);
       state.sliderSettings = { ...state.sliderSettings, ...action.payload };
     },
+    setMonthlyPrice: (state, action) => {
+     state.monthlyPrice= action.payload
+    }
   },
 });
-export const { autoplay, setHoverState, updateSliderSettings,updateCurrentElement,updateCurrentSlide } =
+export const { autoplay, setHoverState, updateSliderSettings,updateCurrentElement,updateCurrentSlide,setMonthlyPrice } =
   sliderSlice.actions;
 export default sliderSlice.reducer;

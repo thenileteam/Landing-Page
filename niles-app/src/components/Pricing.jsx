@@ -1,6 +1,6 @@
 const Pricing = ({ id, text }) => {
       return (
-        <div className="flex justify-center items-center gap-5 py-2" key={id} >
+        <div className="flex justify-center items-center gap-2 py-2" key={id} >
           <svg
             width="21"
             height="16"
