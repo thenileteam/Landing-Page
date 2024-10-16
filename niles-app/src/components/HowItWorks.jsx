@@ -10,7 +10,7 @@ const HowItWorks = () => {
         <div className=" bg-pry1">
           <h2 className="section-header">How It Works</h2>
           <div className="mt-20 flex-container items-center flex-col gap-10 lg:gap-5 lg:flex-row ">
-            <div className="lg:w-2/5 flex items-start">
+            <div className="lg:w-2/5 flex items-start gap-3">
               {/* dots */}
               <img
                 src={dots}

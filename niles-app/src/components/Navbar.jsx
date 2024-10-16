@@ -78,7 +78,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Nav Links */}
-            <nav className="flex flex-col px-3 gap-2">
+            <nav className="flex flex-col px-3 gap-4">
               {navLinkItems.map((item) => {
                 const { id, url, text, icon } = item;
                 return (
