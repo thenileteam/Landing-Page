@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import storeImg from '../../assets/store-2.svg'
-import storeImg2 from '../../assets/store.svg'
+import storeImg1 from '../../assets/store-r.png'
 const initialState = {
   sliderSettings: {
     dots: false,
@@ -10,7 +10,7 @@ const initialState = {
     slidesToScroll: 1,
     autoplay: true, 
   },
-  sliderImages:[storeImg, storeImg2],
+  sliderImages:[storeImg, storeImg1],
 };
 
 const sliderSlice = createSlice({

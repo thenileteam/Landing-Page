@@ -9,7 +9,6 @@ import "slick-carousel/slick/slick-theme.css";
 const ImageSlider = () => {
   const dispatch = useDispatch();
   const sliderRef = useRef(null);
-  // Get individual state properties from Redux store
   const { images, isHovered, sliderSettings, currentElement, } = useSelector(
     (store) => store.slider
   );
@@ -22,27 +21,26 @@ const ImageSlider = () => {
       } else {
         // For desktop view, disable autoplay
         dispatch(updateSliderSettings({ autoplay: false, speed: 1000 }));
-        
       }
     };
 
     updateSettings();
 
-    // when the window resizes update the settings
+    // when the window resizes update the settings function
     window.addEventListener("resize", updateSettings);
 
     // Clean up function for the event listener
     return () => window.removeEventListener("resize", updateSettings);
-  }, [ isHovered,currentElement,dispatch]);
+  }, [dispatch]);
 
   // Update the current slide based on hover state on the desktop view
   useEffect(() => {
     if (window.innerWidth >= 1000 && sliderRef.current && isHovered) {
       const currentSlide = sliderRef.current.innerSlider.state.currentSlide;
-      if (currentElement !== currentSlide) {
+      if (currentElement === currentSlide) return
         sliderRef.current.slickGoTo(currentElement);
         dispatch(updateCurrentSlide(currentElement));
-      }
+       
     }
   }, [currentElement, isHovered]);
 
@@ -54,6 +52,7 @@ const ImageSlider = () => {
             <img
               src={image}
               alt={`Slide ${index + 1}`}
+              loading="lazy" 
               className="w-full h-auto"
             />
           </div>

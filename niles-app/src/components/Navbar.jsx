@@ -19,8 +19,8 @@ const Navbar = () => {
       <div className="text-pry1">
         <div className="flex justify-between lg:gap-24 items-center py-3.5">
           {/* Logo  and remember to add the beta tag*/}
-          <span className="bg-blue-500 cursor-pointer text-sm rounded-very-round fixed py-1 px-2 top-4 left-32 lg:left-36">beta</span>
-          <a href="#home">
+          <span className="bg-blue-500 cursor-pointer text-sm rounded-very-round fixed py-1 px-2 top-4 left-28 lg:left-36">beta</span>
+          <a href="#hero" id='home'>
             <Logo />
           </a>
 
@@ -54,15 +54,14 @@ const Navbar = () => {
             </div>
           </nav>
 
-          {/* Join Waitlist button for large screens */}
           <button
             type="button"
             className="hidden bg-pry1 text-primary font-bold transitions btn-join-waitList hover:border-2 hover:bg-transparent hover:text-pry1 lg:block lg:w-36"
           >
-            <a href="#">Join Waitlist</a>
+            <a href="https://getnile.co/" target="_blank" rel="noopener noreferrer">Join Waitlist</a>
           </button>
 
-          {/* Mobile Menu (slide-in) */}
+          {/* Mobile Menu*/}
           <div
             className={`fixed top-0 right-0 w-80 h-screen bg-myCustomColor-lighterGreen z-50 transform ${
               isOpen ? "translate-x-0" : "translate-x-full"
@@ -74,28 +73,28 @@ const Navbar = () => {
                 className="text-gray-600 text-3xl"
                 onClick={() => dispatch(closeNavbar())}
               >
-                <img src={closeBtn} className="" />
+                <img src={closeBtn}  loading="lazy" className="" />
               </button>
             </div>
 
             {/* Mobile Nav Links */}
-            <nav className="flex flex-col p-4 space-y-4">
+            <nav className="flex flex-col px-3 gap-4">
               {navLinkItems.map((item) => {
                 const { id, url, text, icon } = item;
                 return (
                   <div
                     key={id}
-                    className="flex items-center gap-3 p-3 border-2 rounded-lg border-myCustomColor-light"
+                    className="flex items-center gap-3 p-2 border-2 rounded-lg border-myCustomColor-light"
                     onClick={() => dispatch(closeNavbar())}
                   >
-                    <img src={icon} alt={text} className="w-8" />
+                    <img src={icon} alt={text}  loading="lazy" className="w-8" />
                     <a href={url} className="font-semibold text-primary">
                       {text}
                     </a>
                   </div>
                 );
               })}
-              <div className="fixed bottom-10 text-primary">
+              <div className="fixed bottom-1 text-primary">
                 <Socials color='#004324'/>
               </div>
             </nav>
