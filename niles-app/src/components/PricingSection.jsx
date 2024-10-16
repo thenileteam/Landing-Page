@@ -4,7 +4,6 @@ import{setMonthlyPrice} from '../features/Slider/sliderSlice'
 import { useDispatch } from "react-redux";
 const PricingSection = () => {
   const dispatch = useDispatch();
-
   return (
     <section  id="pricingSection"className="section-spacing bg-myCustomColor-lighterGreen rounded-t-semi-round">
       <h2 className="section-header">Our Plans</h2>
@@ -14,9 +13,8 @@ const PricingSection = () => {
       </div>
       {/* render a plan for each plan */}
       <div className="flex gap-10 flex-col lg:flex-row">
-      
-        {plans.map((item,i) => (
-          <Plan key={item.id} {...item}  {...pricing[i]}/>
+        {plans.map((item, i) => (
+          <Plan key={item.id} {...item} {...pricing[i]}/>
         ))}
       </div>
       <a href="https://getnile.co/" target="_blank" rel="noopener noreferrer">

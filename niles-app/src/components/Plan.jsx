@@ -21,9 +21,8 @@ const Plan = ({ id, head, monthly, yearly, text, textArray }) => {
         )}
         <p className="text-myCustomColor-light font-bold pt-2">{text}</p>
       </div>
-      <p className="text-center font-bold">You Get</p>
       {/* Pricing */}
-      <div className="text-center">
+      <div className="#">
         {textArray.map((plan) => (
           <Pricing key={plan.id} {...plan} />
         ))}

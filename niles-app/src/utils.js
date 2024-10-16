@@ -1,9 +1,10 @@
 import home from './assets/home-13.svg'
 import features from './assets/features-icon.svg'
+import worksIcon from './assets/works-icon.svg'
 
 export const navLinkItems = [
   { id: 1, text: "Home", url: "#hero", icon:home },
-  { id: 2, text: "How It Works", url: "#howItWorks", icon:home },
+  { id: 2, text: "How It Works", url: "#howItWorks", icon:worksIcon },
   { id: 3, text: "Pricing", url: "#pricingSection", icon: features },
 ];
 
@@ -87,7 +88,7 @@ export const pricing = [
       },
       {
         id: 7,
-        text: "Personalized business domain tht ends with.com.ng",
+        text: "Personalized business domain that ends with .com.ng",
       },
       {
         id: 8,
@@ -101,18 +102,17 @@ export const howItWorksSteps = [
   {
     id: 0,
     heading: "Add Product",
-    paragraph:'Choose your primary color,upload your logo,fill your address details and add your products.'
+    paragraph:'Choose your primary color, upload your logo,fill your address details and add your products.'
   },
   {
     id: 1,
     heading: "Customize Your Store",
     paragraph:'Post your first product and start making sales.'
- 
   },
   {
     id: 2,
     heading: "Receive Payment",
-    paragraph:'With ease,receive your money across board and from anywhere.'
+    paragraph:'With ease, receive your money across board and from anywhere.'
      
   },
 ];

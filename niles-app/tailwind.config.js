@@ -27,15 +27,15 @@ export default {
       },
       fontSize: {
         "big-font": "5rem",
-        "small-font": "3rem",
+        "small-font": "2.5rem",
       },
        
       lineHeight: {
         lineSm: "48px",
-        lineBg: "90px",
+        lineBg: "80px",
       },
       letterSpacing: {
-        spacing: "-0.25rem",
+        spacing: "-0.30rem",
       },
     },
     plugins: [],

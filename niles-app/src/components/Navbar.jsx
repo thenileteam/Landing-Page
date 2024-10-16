@@ -73,28 +73,28 @@ const Navbar = () => {
                 className="text-gray-600 text-3xl"
                 onClick={() => dispatch(closeNavbar())}
               >
-                <img src={closeBtn} className="" />
+                <img src={closeBtn}  loading="lazy" className="" />
               </button>
             </div>
 
             {/* Mobile Nav Links */}
-            <nav className="flex flex-col p-4 space-y-4">
+            <nav className="flex flex-col px-3 gap-2">
               {navLinkItems.map((item) => {
                 const { id, url, text, icon } = item;
                 return (
                   <div
                     key={id}
-                    className="flex items-center gap-3 p-3 border-2 rounded-lg border-myCustomColor-light"
+                    className="flex items-center gap-3 p-2 border-2 rounded-lg border-myCustomColor-light"
                     onClick={() => dispatch(closeNavbar())}
                   >
-                    <img src={icon} alt={text} className="w-8" />
+                    <img src={icon} alt={text}  loading="lazy" className="w-8" />
                     <a href={url} className="font-semibold text-primary">
                       {text}
                     </a>
                   </div>
                 );
               })}
-              <div className="fixed bottom-10 text-primary">
+              <div className="fixed bottom-1 text-primary">
                 <Socials color='#004324'/>
               </div>
             </nav>

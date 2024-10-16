@@ -52,7 +52,7 @@ body {
     @apply lg:flex justify-between;
   }
   .transitions {
-    @apply transition delay-200 duration-200 ease-in;
+    @apply transition-all delay-100 duration-200 ease-in;
   }
   .btn-join-waitList {
     @apply h-12 px-4 rounded-semi-round font-semibold;
