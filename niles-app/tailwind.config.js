@@ -8,6 +8,7 @@ export default {
         primary: "#004324",
         pry1: "#fff",
         pry2: "#F5F5F5",
+        pry3: '#333',
         myCustomColor: {
           light: "#8ED06C",
           lighterGreen: "#EAF4E2",
@@ -26,15 +27,15 @@ export default {
       },
       fontSize: {
         "big-font": "5rem",
-        "small-font": "3rem",
+        "small-font": "2.5rem",
       },
        
       lineHeight: {
         lineSm: "48px",
-        lineBg: "100px",
+        lineBg: "80px",
       },
       letterSpacing: {
-        spacing: "-0.25rem",
+        spacing: "-0.30rem",
       },
     },
     plugins: [],

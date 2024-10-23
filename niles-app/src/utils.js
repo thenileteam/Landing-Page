@@ -1,31 +1,11 @@
-import orderAnime from "./assets/rafiki.svg";
-import amico from "./assets/amico.svg";
 import home from './assets/home-13.svg'
 import features from './assets/features-icon.svg'
+import worksIcon from './assets/works-icon.svg'
 
 export const navLinkItems = [
-  { id: 1, text: "Home", url: "#home", icon:home },
-  { id: 2, text: "How It Works", url: "#howItWorks", icon:home },
+  { id: 1, text: "Home", url: "#hero", icon:home },
+  { id: 2, text: "How It Works", url: "#howItWorks", icon:worksIcon },
   { id: 3, text: "Pricing", url: "#pricingSection", icon: features },
-];
-
-export const steps = [
-  {
-    id: 1,
-    heading: "Seamlessly manage orders with ease",
-    paragraph:
-      "Get instant notifications and track your orders effortlessly in real time. With Nile, you’ll never miss a sale,keeping your business running smoothly every step of the way.",
-    img: orderAnime,
-    bg: "bg-myCustomColor-light",
-  },
-  {
-    id: 2,
-    heading: "Stay ahead with smart inventory alerts.",
-    paragraph:
-      "No more stock outs! Get timely low inventory alerts and reorder products i seconds,ensuring your store is always ready to meet customer demands without delay.",
-    img: amico,
-    bg: "bg-primary",
-  },
 ];
 
 export const plans = [
@@ -34,12 +14,12 @@ export const plans = [
     head: "Free Plan",
     monthly: 0,
     yearly: 0,
-    text: `Basic features to get started.Great for testing out the platform`,
+    text: `Basic features to get started.`, 
   },
   {
     id: 2,
     head: "Premium Plan",
-    monthly: 8500,
+    monthly: 4500,
     yearly: 55000,
     text: "Perfect for scaling your business",
   },
@@ -67,7 +47,7 @@ export const pricing = [
       },
       {
         id: 5,
-        text: "limited  product listing",
+        text: "Limited  product listing",
       },
       {
         id: 6,
@@ -75,7 +55,7 @@ export const pricing = [
       },
       {
         id: 7,
-        text: "free domain that ends with .mynile.store",
+        text: "Free domain that ends with .mynile.store",
       },
     ],
   },
@@ -108,7 +88,7 @@ export const pricing = [
       },
       {
         id: 7,
-        text: "Personalized business domain tht ends with.com.ng",
+        text: "Personalized business domain that ends with .com.ng",
       },
       {
         id: 8,
@@ -122,16 +102,17 @@ export const howItWorksSteps = [
   {
     id: 0,
     heading: "Add Product",
+    paragraph:'Choose your primary color, upload your logo,fill your address details and add your products.'
   },
   {
     id: 1,
     heading: "Customize Your Store",
- 
+    paragraph:'Post your first product and start making sales.'
   },
   {
     id: 2,
-    heading: "Recieve Payment",
+    heading: "Receive Payment",
+    paragraph:'With ease, receive your money across board and from anywhere.'
      
   },
 ];
-// export const colors=['#004324', '#F5F5F5']

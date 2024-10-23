@@ -1,9 +1,9 @@
 const Pricing = ({ id, text }) => {
       return (
-        <div className="flex justify-center items-center gap-5 py-2" key={id} >
+        <div className="flex items-center gap-2 py-2" key={id} >
           <svg
-            width="21"
-            height="16"
+            width="20"
+            height="17"
             viewBox="0 0 21 16"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

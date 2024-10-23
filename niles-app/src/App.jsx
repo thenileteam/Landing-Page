@@ -1,6 +1,5 @@
 import { Navbar, Hero, PricingSection,HowItWorks,Sliders,Footer, } from "./components";
 
- 
 const App = () => {
   return (
     <div>
